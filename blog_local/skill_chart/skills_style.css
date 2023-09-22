@@ -1,0 +1,120 @@
+.main-container{
+  background-color: #0f0f0f;  
+}
+
+.header{
+  margin-bottom: 30px;
+  margin-left:65px;
+  font-size: 3.2em; 
+  font-family: "Roboto", sans-serif; 
+}
+
+
+.chart-container {
+  display: flex; /* Ensure the groups are side by side */
+  justify-content: center;
+  gap: 30px; /* Space between the two chart groups */
+}
+
+.chart-group {
+  display: flex;
+  flex-direction: column;
+  width: 45%; /* Give each group almost half the width of the container */
+  gap: 20px; /* Space between charts in a group */
+}
+.container {
+    position: relative;
+
+}
+
+.chart {
+  margin-bottom: 30px;  /* Space between each chart */
+ 
+}
+
+.chart-header {
+  text-align: left;
+  font-size: 1.2em;  /* Adjust font size as needed */
+  margin-bottom: 5px;  /* Space between header and progress bar */
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+
+.progress2 {
+  height: 40px;  /* Ensure the container has a height */
+  background-color: #c2b5b5;  /* Light grey background for contrast */
+  margin-top: 30px;
+  border-radius: 50px;
+  max-width: 100%;  /* adjust this value as needed */
+  margin-right: auto; /* ensures the space is on the right side */
+  margin-top: 20px; /* Add spacing between charts */
+}
+  
+.progress-bar2 {
+  height: 18px;
+  border-radius: 48px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+  width: 0%; /* Initialize width to 0 */
+  height: 100%;  /* Take the full height of the parent */
+  background-color: #f3c623; 
+  transition: width 2s ease-out; /* Adjust the duration as needed */ 
+  animation-name: colorChange;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; 
+  width: 0%; /* This stays */
+}
+
+@keyframes colorWidthChangeLow {
+  100% {
+      background-color: #f0063d; /* Red */
+  }
+}
+
+@keyframes colorWidthChangeMedium {
+  0% {
+      background-color: #f0063d; /* Red */
+  }
+  100% {
+      background-color: #fc8702; /* Orange */
+  }
+}
+
+@keyframes colorWidthChangeHigh {
+  0% {
+      background-color: #f0063d; /* Red */
+  }
+  50% {
+      background-color: #fc8702; /* Orange */
+  }
+  100% {
+      background-color: #00f800; /* Green */
+  }
+}
+
+
+/* Low percentage */
+[data-percentage='10'] .progress-bar2,
+[data-percentage='20'] .progress-bar2,
+[data-percentage='30'] .progress-bar2 {
+  animation: colorWidthChangeLow 2s ease-out forwards;
+}
+
+/* Medium percentage */
+[data-percentage='40'] .progress-bar2,
+[data-percentage='50'] .progress-bar2,
+[data-percentage='60'] .progress-bar2 {
+  animation: colorWidthChangeMedium 2s ease-out forwards;
+}
+
+/* High percentage */
+[data-percentage='70'] .progress-bar2,
+[data-percentage='80'] .progress-bar2,
+[data-percentage='90'] .progress-bar2,
+[data-percentage='100'] .progress-bar2 {
+  animation: colorWidthChangeHigh 2s ease-out forwards;
+}
+
