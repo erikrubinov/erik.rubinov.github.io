@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of Your Webpage</title>
+    
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="project_styles.css">
+</head>
+<body>
+
+<!-- Your existing HTML content goes here -->
+
+
+
+      <div class="ag-format-container">
+
+        <div class="js-timeline ag-timeline">
+
+          <div class="js-timeline_line ag-timeline_line">
+            
+            <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+            
+          </div>
+
+          <div class="ag-timeline_list">
+
+
+            <div class="js-timeline_item ag-timeline_item">
+              
+              <div class="ag-timeline-card_box">
+                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                  <div class="ag-timeline-card_point">2021</div>
+                </div>
+                <div class="ag-timeline-card_meta-box">
+                  <div class="ag-timeline-card_meta">Studyproject</div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_item">  
+                    <div class="ag-timeline-card_inner">
+                      <div class="ag-timeline-card_img-box">
+                          <!-- Displayed Image -->
+                          <img src="https://mikrocontroller.bplaced.net/wordpress/wp-content/uploads/2013/02/myAVR_MK3.jpg" class="ag-timeline-card_img" id="second_img" width="640" height="360" />
+                  
+                          
+                      </div>
+                </div>
+                  <div class="ag-timeline-card_info">
+                    <div class="ag-timeline-card_desc">
+
+                      <div>
+                        <strong>Programming language:</strong> C<br>
+                        <strong>Duration:</strong> 6 months<br><br>
+                    
+                        <p>
+                            In this project, I built my own small operating system for the AT Mega 644 Microcontroller. That included implementing:
+                            <ul>
+                                <li>Bootloader</li>
+                                <li>Scheduler</li>
+                                <li>Interrupts/Polling</li>
+                                <li>Input and output binding</li>
+                                <li>Memory management</li>
+                                <li>Connection of the processor to peripheral devices</li>
+                                <li>Analog circuits e.g. A/D conversion</li>
+                            </ul>
+                        </p>
+                      </div>
+                    
+                    
+                    </div>
+                 
+                </div>
+                <div class="ag-timeline-card_arrow"></div>
+              </div>
+            </div>
+  
+          <div class="js-timeline_item ag-timeline_item">
+              <div class="ag-timeline-card_box">
+                <div class="ag-timeline-card_meta-box">
+                  <div class="ag-timeline-card_meta">Bachelor thesis</div>
+                </div>
+                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                  <div class="ag-timeline-card_point">2022</div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_item">
+                  <!-- Backward Button -->
+                  <div class="arrow left" onclick="switch_t_i(-1, 'mainImage', 'second','true','mainText')"></div>
+
+                  <!-- Forward Arrow -->
+                  <div class="arrow right" onclick="switch_t_i(1, 'mainImage', 'second','true','mainText')"></div>
+                <div class="ag-timeline-card_inner">
+                <div class="ag-timeline-card_img-box">
+                  
+                  <!-- Displayed Image -->
+                  <img src="https://miro.medium.com/v2/resize:fit:1400/1*a8ilzspHtXpS30-C9Nu9Qw.png" class="ag-timeline-card_img" id="mainImage" onclick="toggleMaximizeImage('mainImage')" />
+
+          
+              
+
+          </div>
+          </div>
+                <div class="ag-timeline-card_info">
+                  <div class="ag-timeline-card_desc">
+                                         <div>
+                        <strong>Programming language:</strong> Python, SQLlite<br>
+                        <strong>Duration:</strong> 6 months<br><br>
+                    
+                        <p id="mainText">
+                            In this thesis, I implemented a software tool for detection and segementation of solar panels on aerial imagery 
+                            via deep learning for estimating their power capacity
+                        </p>
+                      </div>
+                
+                </div>
+              </div>
+              <div class="ag-timeline-card_arrow"></div>
+            </div>
+          </div>
+
+  
+            <div class="js-timeline_item ag-timeline_item">
+              <div class="ag-timeline-card_box">
+                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                  <div class="ag-timeline-card_point">2023</div>
+                </div>
+                <div class="ag-timeline-card_meta-box">
+                  <div class="ag-timeline-card_meta">personal project</div>
+                </div>
+              </div>
+              <div class="ag-timeline-card_item">
+                <div class="ag-timeline-card_inner">
+                  <div class="ag-timeline-card_img-box">
+                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-11.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                  </div>
+                  <div class="ag-timeline-card_info">
+                    <div class="ag-timeline-card_desc">
+                      Aenean imperdiet. Etiam ultricies
+                      nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                      Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                      adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+                      hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+                      sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
+                      eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+                    </div>
+                  </div>
+                </div>
+                <div class="ag-timeline-card_arrow"></div>
+              </div>
+            </div>
+  
+    
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="project_script.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,27 +1,54 @@
-.main-container{
-  background-color: #0f0f0f;  
+.main-container {
+  background-color: #323232;
+  height: 1200;
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align children to start */
+  padding-top: 50px; /* Or adjust as needed to push the header down */
 }
 
-.header{
-  margin-bottom: 30px;
-  margin-left:65px;
-  font-size: 3.2em; 
-  font-family: "Roboto", sans-serif; 
+.header {
+  margin: 0 0 60px 65px; /* Removed margin-bottom, since the space is now dictated by the padding on .main-container */
+  font-size: 3.2em;
+  font-family: 'Courier New', monospace;
+  color: white;
 }
+
+.chart-set {
+  margin-bottom: 20px; /* Adjust space between chart sets if necessary */
+}
+
 
 
 .chart-container {
   display: flex; /* Ensure the groups are side by side */
   justify-content: center;
-  gap: 30px; /* Space between the two chart groups */
+  gap: 60px; /* Space between the two chart groups */
 }
+
+.sub-header {
+  font-size: 2em; /* Adjust as needed */
+  font-family: 'Courier New', monospace;
+  color: #f3c623; /* Adjust the color as needed */
+  margin-top: 10px; /* Space below the sub-header */
+  text-align: center; /* Center the sub-header above the .chart-group */
+}
+
+
+
 
 .chart-group {
   display: flex;
+  
   flex-direction: column;
   width: 45%; /* Give each group almost half the width of the container */
-  gap: 20px; /* Space between charts in a group */
+  gap: 1px; /* Space between charts in a group */
+  background-color: #1d1d1d;
+
+  border: 1px solid grey; /* Add a thin grey border */
+  border-radius: 10px; /* Add rounded corners */
 }
+
 .container {
     position: relative;
 
@@ -36,20 +63,24 @@
   text-align: left;
   font-size: 1.2em;  /* Adjust font size as needed */
   margin-bottom: 5px;  /* Space between header and progress bar */
-  font-family: "Roboto", sans-serif;
+  font-family: 'Courier New', monospace;
+  color: white;
+  margin-left: 65px;
+  margin-top: 20px; 
+ 
 }
 
 
 
 
 .progress2 {
-  height: 40px;  /* Ensure the container has a height */
-  background-color: #c2b5b5;  /* Light grey background for contrast */
+  height: 15px;  /* Ensure the container has a height */
+  background-color: #413e3e;  /* Light grey background for contrast */
   margin-top: 30px;
   border-radius: 50px;
-  max-width: 100%;  /* adjust this value as needed */
-  margin-right: auto; /* ensures the space is on the right side */
-  margin-top: 20px; /* Add spacing between charts */
+  max-width: 80%;  /* adjust this value as needed */
+  margin-top: 30px; /* Add spacing between charts */
+  margin-left: 65px;
 }
   
 .progress-bar2 {
@@ -117,4 +148,95 @@
 [data-percentage='100'] .progress-bar2 {
   animation: colorWidthChangeHigh 2s ease-out forwards;
 }
+.further_skills_container {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center items on the main axis */
+  align-items: center; /* Center items on the cross axis */
+  background-color: #1d1d1d;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding-top: 0px;
+  width: 60%;
+  margin: 30px auto 0 auto;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.skills-header {
+  text-align: center; /* Center the text */
+  margin: 10px auto; /* Center the block element */
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  font-family: 'Courier New', monospace;
+  color: white;
+
+}
+
+.skills-header span {
+  display: inline-block;
+  margin-right: 5px; /* Add horizontal space between skills */
+  margin-bottom: 5px; /* Add vertical space between rows */
+}
+
+
+.glow-on-hover {
+  
+  
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #777474;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #7e2f2f
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #484646;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
 

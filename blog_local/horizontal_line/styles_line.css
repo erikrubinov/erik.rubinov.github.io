@@ -5,6 +5,8 @@
   outline: none;
 }
 
+
+
 .timeline-carousel {
   margin: 0;
   background-color: #323232;
@@ -260,8 +262,10 @@
 
 .slick-prev {
   left: 0;
+ 
 }
 
 .slick-next {
   right: 30px;
+  
 }
