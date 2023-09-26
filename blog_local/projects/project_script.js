@@ -71,31 +71,6 @@
   })(jQuery);
 
 
-  var imagesFirstSlider = [
-    "https://mikrocontroller.bplaced.net/wordpress/wp-content/uploads/2013/02/myAVR_MK3.jpg",
-    
-   
-    // ... other images specific to the first slider
-];
-
-var imagesSecondSlider = [
-    "https://miro.medium.com/v2/resize:fit:1400/1*a8ilzspHtXpS30-C9Nu9Qw.png",
-    "model.png",
-    "test.jpg",
-
-    // ... other images specific to the second slider
-];
-
-
-
-
-
-var currentImageIndex = 0;
-var switchInterval;
-
-
-var currentIndexFirstSlider = 0;
-var currentIndexSecondSlider = 0;
 
 
 function startAutoSwitch() {
@@ -118,6 +93,42 @@ function switch_t_i(direction, imgID,sliderType, text_bool, textID){
 
 }
 
+var imagesFirstSlider = [
+  "https://mikrocontroller.bplaced.net/wordpress/wp-content/uploads/2013/02/myAVR_MK3.jpg",
+];
+
+var imagesSecondSlider = [
+  "recog.png",
+  "model.png",
+  "test.jpg",
+];
+
+
+var imagesThirdSlider = [
+"IMG_4247.jpeg",
+"IMG_4242.PNG",
+];
+
+var imagesFourthSlider = [
+  "soulmate_first.png",
+  "soulmate_second.png",
+];
+  
+
+
+var currentImageIndex = 0;
+var switchInterval;
+
+
+var currentIndexFirstSlider = 0;
+var currentIndexSecondSlider = 0;
+var currentIndexThirdSlider = 0;
+var currentIndexFourthSlider = 0;
+
+
+
+
+
 function switchImage(direction, imgID, sliderType) {
   var imagesArray, currentIndex;
 
@@ -125,13 +136,29 @@ function switchImage(direction, imgID, sliderType) {
       imagesArray = imagesFirstSlider;
       currentIndex = currentIndexFirstSlider;
       currentIndexFirstSlider = (currentIndex + direction + imagesArray.length) % imagesArray.length;
+      currentIndex= currentIndexFirstSlider
   } else if (sliderType === 'second') {
       imagesArray = imagesSecondSlider;
       currentIndex = currentIndexSecondSlider;
       currentIndexSecondSlider = (currentIndex + direction + imagesArray.length) % imagesArray.length;
+      currentIndex= currentIndexSecondSlider
+  }
+  else if (sliderType === 'third') {
+    imagesArray = imagesThirdSlider;
+    currentIndex = currentIndexThirdSlider;
+    currentIndexThirdSlider = (currentIndex + direction + imagesArray.length) % imagesArray.length;
+    currentIndex= currentIndexThirdSlider
+  }
+  else if (sliderType === 'fourth') {
+    imagesArray = imagesFourthSlider;
+    currentIndex = currentIndexFourthSlider;
+    currentIndexFourthSlider = (currentIndex + direction + imagesArray.length) % imagesArray.length;
+    currentIndex= currentIndexFourthSlider
   }
 
-  document.getElementById(imgID).src = imagesArray[currentIndexSecondSlider];
+  
+
+  document.getElementById(imgID).src = imagesArray[currentIndex];
 }
 
 

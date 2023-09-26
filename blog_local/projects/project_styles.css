@@ -232,6 +232,7 @@
   }
   .ag-timeline-card_img {
     width: 100%;
+  
   }
   .ag-timeline-card_info {
     padding: 20px 30px;
@@ -250,6 +251,7 @@
   
     font-size: 16px;
     color: #FFF;
+    font-family: 'Courier New', monospace;
   }
   
   
@@ -352,10 +354,10 @@
 
   .arrow {
     position: absolute;
-    top: 50%;
+    top: 5%;
     width: 30px;
     height: 30px;
-    background-color: rgba(34, 0, 255, 0.6); 
+    background-color: rgb(0, 42, 255); 
     cursor: pointer;
     transform: translateY(-50%);
 }
