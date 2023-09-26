@@ -105,8 +105,8 @@ var imagesSecondSlider = [
 
 
 var imagesThirdSlider = [
-"IMG_4247.jpeg",
-"IMG_4242.PNG",
+"IMG_4247.png",
+"IMG_4242.png",
 ];
 
 var imagesFourthSlider = [

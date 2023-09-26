@@ -4,11 +4,11 @@
   display: flex; /* Flexbox */
   flex-direction: column; /* Stack children vertically */
   justify-content: flex-start; /* Align children to start */
-  padding-top: 50px; /* Or adjust as needed to push the header down */
+  padding-top: 20px; /* Or adjust as needed to push the header down */
 }
 
 .header {
-  margin: 0 0 60px 65px; /* Removed margin-bottom, since the space is now dictated by the padding on .main-container */
+  margin: 0 0 40px 65px; /* Removed margin-bottom, since the space is now dictated by the padding on .main-container */
   font-size: 3.2em;
   font-family: 'Courier New', monospace;
   color: white;

@@ -81,8 +81,8 @@
 }
 .timeline-carousel__item-inner .year {
   font-family: "Libre Franklin", sans-serif;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 32px;
+  line-height: 32px;
   color: white;
   display: table;
   letter-spacing: -1px;
@@ -106,7 +106,7 @@
 }
 .timeline-carousel__item-inner .month {
   font-family: "Libre Franklin", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #ffc107;
   display: block;
@@ -114,10 +114,10 @@
   font-weight: 600;
 }
 .timeline-carousel__item-inner p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
   color: white;
-  width: 60%;
+  width: 90%;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -236,9 +236,10 @@
   color: #fff;
 }
 
+/*schwarzer pfeil muss gelöscht werden*/
 .slick-prev svg, .slick-next svg {
   height: auto;
-  width: 18px;
+  width: 0;
   padding-bottom: 2px;
 }
 .slick-prev .btn, .slick-next .btn {
@@ -251,9 +252,8 @@
 
 .slick-prev, .slick-next {
   position: absolute;
-  top: 0;
+  top: 10;
   z-index: 9999;
-  border-radius: 0;
   font-family: "Libre Franklin", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
