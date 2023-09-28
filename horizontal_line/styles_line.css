@@ -112,6 +112,7 @@
   display: block;
   margin-bottom: 10px;
   font-weight: 600;
+  width: 80%;
 }
 .timeline-carousel__item-inner p {
   font-size: 13px;
